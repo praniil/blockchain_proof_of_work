@@ -74,8 +74,8 @@ func run() error {
 	s := &http.Server{
 		Addr:           ":" + http_port,
 		Handler:        mux,
-		ReadTimeout:    10 * time.Second,
-		WriteTimeout:   10 * time.Second,
+		ReadTimeout:    100 * time.Second,
+		WriteTimeout:   100 * time.Second,
 		MaxHeaderBytes: 1 << 20,
 	}
 
